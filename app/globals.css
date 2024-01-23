@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: VazirLight;
+    src: url("../public/Fonts/Vazirmatn-Light.woff2") format("truetype");
+  }
+  
+  @font-face {
+    font-family: VazirMedium;
+    src: url("../public/Fonts/Vazirmatn-Medium.woff2") format("truetype");
+  }
+  
+  @font-face {
+    font-family: VazirBold;
+    src: url("../public/Fonts/Vazirmatn-Bold.woff2") format("truetype");
+  }
