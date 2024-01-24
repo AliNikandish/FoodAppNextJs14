@@ -74,7 +74,7 @@ const Navbar = () => {
             </li>
           ))}
 
-          <li className="md:ml-1 text-xl md:my-0 m-2 text-center ">
+          <li className="flex justify-center  text-xl   text-center ">
             {isLoggedIn ? (
               <div className="flex flex-col md:flex-row gap-2">
                 <button
@@ -136,7 +136,7 @@ const Navbar = () => {
             )}
           </li>
 
-          <li className="md:ml-8 text-xl md:my-0 m-2 text-center">
+          <li className="flex justify-center  text-xl  text-center mt-2">
             <Link
               href={`/cart`}
               className="flex items-center gap-x-3 bg-red-600 text-white p-2 py rounded w-[350px] md:w-[150px]"
