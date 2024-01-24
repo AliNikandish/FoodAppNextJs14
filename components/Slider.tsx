@@ -19,7 +19,7 @@ const Slider = ({ component, type }: { component: any; type: string }) => {
         className="mySwiper"
         breakpoints={{
           320: {
-            slidesPerView: 2,
+            slidesPerView: 1,
           },
           640: {
             slidesPerView: 4,
@@ -56,31 +56,38 @@ const Slider = ({ component, type }: { component: any; type: string }) => {
       <Swiper
         // slidesPerView={4}
         navigation={true}
+        
         modules={[Navigation]}
         className="mySwiper"
         breakpoints={{
           320: {
-            slidesPerView: 2,
+            slidesPerView: 1,
             spaceBetween: 20,
           },
           640: {
+            slidesPerView: 2,
+            spaceBetween: 20,
+          },
+          
+          768: {
             slidesPerView: 3,
             spaceBetween: 20,
+
           },
         }}
       >
         {component.map((item: any) => {
           return (
-            <SwiperSlide key={item.id}>
+            <SwiperSlide key={item.id} className="py-10">
               <Link href={`/product/${item.id}`}>
                 <div
                   key={item.id}
-                  className="border shadow-lg rounded-lg hover:scale-105 duration-300"
+                  className="border shadow-lg rounded-lg overflow-hidden hover:scale-105  duration-300"
                 >
                   <Image
                     alt=""
                     src={item.image}
-                    className="w-full h-[300px] object-cover rounded-t-lg"
+                    className="w-full h-[300px] object-cover rounded-t-lg "
                     width={200} height={300}
                   />
                   <div className="flex flex-col lg:flex-row justify-between px-2 py-4 gap-3">
