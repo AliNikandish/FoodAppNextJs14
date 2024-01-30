@@ -136,12 +136,12 @@ const Navbar = () => {
             )}
           </li>
 
-          <li className="flex justify-center  text-xl  text-center mt-2">
+          <li className="flex justify-center  text-xl  text-center mt-2 md:mt-0 mr-1">
             <Link
               href={`/cart`}
-              className="flex items-center gap-x-3 bg-red-600 text-white p-2 py rounded w-[350px] md:w-[150px]"
+              className="bg-red-600 text-white p-2 py rounded w-[350px] md:w-[150px]"
             >
-              <div className="flex gap-x-1 items-center">
+              <div className="flex gap-x-1 items-center justify-center">
                 <FaCartShopping />
                 <span>سبد خرید</span>
                 {myCart && myCart.length > 0 && myCart.length}
