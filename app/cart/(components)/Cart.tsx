@@ -174,7 +174,7 @@ const Cart = () => {
               return (
                 <div
                   key={`${item.productId}-${item.size}`}
-                  className="flex gap-x-3 justify-between mb-6 rounded-lg bg-white p-6 shadow-md sm:flex sm:justify-start"
+                  className="flex flex-col md:flex-row gap-x-3 justify-between mb-6 rounded-lg bg-white p-6 shadow-md sm:flex sm:justify-start"
                 >
                   <Image
                     src={item.productImage}
