@@ -1,9 +1,9 @@
-import Comments from "@/components/Comments";
 import ProductDetail from "@/components/ProductDetail";
 import ProductTabs from "@/components/ProductTabs";
 import { Product } from "@prisma/client";
 import Image from "next/image";
 import React from "react";
+import type { Metadata, ResolvingMetadata } from 'next'
 
  const getProduct = async (id: string): Promise<Product | null> => {
   try {
@@ -37,6 +37,33 @@ import React from "react";
 
   return null;
 };
+
+
+
+ 
+type Props = {
+  params: { id: string }
+  searchParams: { [key: string]: string | string[] | undefined }
+}
+ 
+export async function generateMetadata(
+  { params, searchParams }: Props,
+  parent: ResolvingMetadata
+): Promise<Metadata> {
+  // read route params
+  const id = params.id
+ 
+  // fetch data
+  const product = await getProduct(id);
+
+  // const product = await fetch(`https://.../${id}`).then((res) => res.json())
+ 
+  // optionally access and extend (rather than replace) parent metadata
+ 
+  return {
+    title: `${product?.title}- فود`,
+  }
+}
 
 
 const page = async ({ params }: { params: { id: string } }) => {
