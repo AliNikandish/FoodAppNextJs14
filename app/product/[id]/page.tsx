@@ -39,8 +39,6 @@ import type { Metadata, ResolvingMetadata } from 'next'
 };
 
 
-
- 
 type Props = {
   params: { id: string }
   searchParams: { [key: string]: string | string[] | undefined }
@@ -55,10 +53,6 @@ export async function generateMetadata(
  
   // fetch data
   const product = await getProduct(id);
-
-  // const product = await fetch(`https://.../${id}`).then((res) => res.json())
- 
-  // optionally access and extend (rather than replace) parent metadata
  
   return {
     title: `${product?.title}- فود`,

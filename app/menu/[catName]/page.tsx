@@ -1,6 +1,7 @@
 import Slider from "@/components/Slider";
 import { Product } from "@prisma/client";
 import React from "react";
+import type { Metadata, ResolvingMetadata } from 'next'
 
 
 const getProduct = async (catName: string): Promise<Product | null> => {
@@ -22,6 +23,26 @@ const getProduct = async (catName: string): Promise<Product | null> => {
 
   return null;
 };
+
+type Props = {
+  params: { id: string }
+  searchParams: { [key: string]: string | string[] | undefined }
+}
+ 
+export async function generateMetadata(
+  { params, searchParams }: Props,
+  parent: ResolvingMetadata
+): Promise<Metadata> {
+
+  const { catName }:any = params;
+
+  const products: any = await getProduct(catName);
+
+
+  return {
+    title: `${products.title}-فود`,
+  }
+}
 
 const page = async ({ params }: { params: { catName: string } }) => {
   const { catName } = params;
