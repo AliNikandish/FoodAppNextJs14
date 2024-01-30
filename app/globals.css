@@ -16,3 +16,39 @@
     font-family: VazirBold;
     src: url("../public/Fonts/Vazirmatn-Bold.woff2") format("truetype");
   }
+
+
+  .swiper-button-next{
+    background-color: black;
+    padding: 24px;
+    border-radius: 100%;
+    width: 15px;
+    height: 15px;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .swiper-button-next::after{
+    color: white;
+    font-size: 30px !important;
+  }
+  
+  
+  .swiper-button-prev{
+    background-color: black;
+    padding: 24px;
+    border-radius: 100%;
+    width: 15px;
+    height: 15px;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .swiper-button-prev::after{
+    color: white;
+    font-size: 30px !important;
+  }
+  
+  

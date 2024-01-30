@@ -14,7 +14,12 @@ const Slider = ({ component, type }: { component: any; type: string }) => {
     return (
       <Swiper
         // slidesPerView={4}
-        navigation={true}
+        // navigation={true}
+        navigation= {{
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        }}
+        
         modules={[Navigation]}
         className="mySwiper"
         breakpoints={{
